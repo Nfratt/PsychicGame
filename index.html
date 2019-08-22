@@ -13,17 +13,26 @@
             // Determines which key was pressed.
             var userGuess = event.key;
             alert(userGuess)
+
             var Wins = 0;
             var losses = 0;
             var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
             var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+            alert(computerGuess);
 
-            if(userGuess==computerGuess){
-            wins++;}
+            if (userGuess == computerGuess) {
+                wins=+1;
 
+                alert('you have won' + wins + 'times');
+            }
 
+            else {
+                losses=+1;
+                alert('you lost' + losses + 'times')
+            }
         };
+
     </script>
     <h1>The Psychic Game</h1>
     <h3>Guess what letter im thinking of? </h3>
