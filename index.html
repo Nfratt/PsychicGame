@@ -8,39 +8,46 @@
 <body>
     <div id="game">
         <script type="text/javascript">
+
             document.onkeyup = function (event) {
 
                 // Determines which key was pressed.
                 var userGuess = event.key;
                 alert(userGuess)
 
-                var Wins = 0;
+                var wins = 0;
                 var losses = 0;
                 var maxloss = 9;
-                var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+                var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+                for (i = 0; i < computerChoices.length; i++) {
+                    
+                    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+                    alert(computerGuess);
+                    document.write("wins:", wins);
+                    document.write("losses:", losses);
+                    document.write("attempts remaining:", maxloss);
 
-                var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-                alert(computerGuess);
+                    if (userGuess == computerGuess) {
+                        wins++;
 
-                if (userGuess == computerGuess) {
-                    wins = +1;
+                        alert('you have won' + wins + 'times');
+                    }
 
-                    alert('you have won' + wins + 'times');
+                    else {
+                        losses++; // losses++;    losses += 1
+                        maxloss--;
+                        alert('incorrect, you tried ' + losses + ' times, and have ' + maxloss + ' remaining')
+                    }
+                    if (maxloss <= 0) {
+                        alert("Reload! you've lost!"+"<br>")
+                    }
+
+
+
+                
                 }
-
-                else {
-                    losses = +1;
-                    maxloss = -1;
-                    alert('incorrect, you tried' + losses + 'times, and have' + maxloss + 'remaining')
-                }
-                if (maxloss <= 0) {
-                    alert('Reload! youve lost!')
-                }
-
-
-
-
             };
+
         </script>
     </div>
     <h1>The Psychic Game</h1>
