@@ -2,3 +2,50 @@ body{background-image: url(../images/leaves-pattern.png)}
 h1{background: teal;
 color: white;
 width: 270px;}
+
+#logo {
+    float: left;
+    width: 250px;
+    height: 90px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 90px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background: #4aaaa5;
+  
+  }
+  #main-content{
+      padding-top: 10%;
+  }
+nav {
+    float: right;
+    margin-top: 25px;
+  }
+  
+  nav a {
+    display: inline-block;
+    padding-left: 15px;
+    margin-left: 15px;
+    line-height: 18px;
+    color: #999;
+    text-decoration: none;
+    border-left: 1px solid #efefef;
+  }
+  
+  nav a:first-child {
+    border-left: 0 none;
+  }
+  footer {
+    padding: 30px 0;
+    clear: both;
+    font-size: 12px;
+    color: #ffffff;
+    color: #cccccc;
+    text-align: center;
+    background: #666666;
+    border-top: 8px solid #4aaaa5;
+    height: 50px;
+  }
