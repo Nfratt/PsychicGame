@@ -17,8 +17,7 @@ width: 270px;}
     background: #4aaaa5;
   
   }
-  #main-content{
-      padding-top: 10%;
+  #main-content{ clear: both;
   }
 nav {
     float: right;
